@@ -2,6 +2,7 @@
 
 
 GREEN='\033[0;32m'
+RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${GREEN}Enter into Infra Directory ${NC}"
@@ -23,6 +24,14 @@ echo -e "${GREEN}Bootstrapping CDK for LocalStack...${NC}"
 cdklocal bootstrap
 
 echo -e "${GREEN}Deploying CDK stack to LocalStack...${NC}"
-cdklocal deploy
+cdklocal deploy --all
 
 echo -e "${GREEN}Done! LocalStack is running and CDK stack deployed (if no errors).${NC}"
+
+echo -e "${RED}Destroying CDK stack to LocalStack...${NC}"
+cdklocal destroy --all
+
+
+echo -e "${RED}Stopping Local Stack Container...${NC}"
+docker rm -f $(docker ps -aq)
+

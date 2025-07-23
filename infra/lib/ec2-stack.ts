@@ -59,8 +59,8 @@ export class Ec2Stack extends cdk.Stack {
             'systemctl enable docker',
             'yum install -y awscli',
             'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085608568682.dkr.ecr.us-east-1.amazonaws.com',
-            'docker pull 085608568682.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-085608568682-us-east-1:06923058b2259c788b841d170025b145a64a85fb1c2848f4f0b942162228bd56',
-            'docker run -d -p 80:3000 -e SECRET_WORD=GOKU 085608568682.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-085608568682-us-east-1:06923058b2259c788b841d170025b145a64a85fb1c2848f4f0b942162228bd56'
+            'docker pull 085608568682.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-085608568682-us-east-1:28ddf73f9050949d28bfe17395f235cbde6b083f4d0cd6d5f74173b253c941d1',
+            'docker run -d -p 80:3000 -e SECRET_WORD=GOKU 085608568682.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-085608568682-us-east-1:28ddf73f9050949d28bfe17395f235cbde6b083f4d0cd6d5f74173b253c941d1'
         );
 
         const questInstance = new ec2.Instance(this, 'QuestInstance', {

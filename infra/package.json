@@ -2,7 +2,7 @@
   "name": "ecs-stack",
   "version": "0.1.0",
   "bin": {
-    "ecs-stack": "bin/ecs-app.ts"
+    "ecs-stack": "bin/app.ts"
   },
   "scripts": {
     "build": "tsc",

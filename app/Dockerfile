@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN chmod +x bin/*
+RUN chmod +x bin/001 bin/*
 
 
 EXPOSE 3000

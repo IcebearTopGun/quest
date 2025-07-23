@@ -25,6 +25,7 @@ export class EcsStack extends cdk.Stack {
         new ecsPatterns.ApplicationLoadBalancedFargateService(this, 'QuestService', {
             cluster,
             taskImageOptions: {
+                // image: ecs.ContainerImage.fromRegistry("dummy"),
                 image: ecs.ContainerImage.fromAsset('../app'),
                 containerPort: 3000,
                 environment: {
