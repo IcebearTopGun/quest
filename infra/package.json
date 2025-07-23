@@ -1,0 +1,25 @@
+{
+  "name": "ecs-stack",
+  "version": "0.1.0",
+  "bin": {
+    "ecs-stack": "bin/ecs-app.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "npx cdk",
+    "synth": "npx cdk synth",
+    "deploy": "npx cdk deploy",
+    "destroy": "npx cdk destroy"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "aws-cdk-lib": "^2.135.0",
+    "aws-cdk": "^2.135.0",
+    "constructs": "^10.0.0",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "aws-cdk": "^2.1021.0"
+  }
+}
