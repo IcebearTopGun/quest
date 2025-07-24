@@ -56,15 +56,47 @@ cdk deploy --all
 ### What would I have If I had more time
 
 ```
-1. EC2 is the working solution for this problem to improve this we can use ECS, I have implemented a very basic ECS exmple too which can be extended
-2. I would have worked more on IAM implementing more granular access controls
-3. Making service entirely private exposing, using vpce and exposure via api gateway instead of ALB creating public subnet
-4. CloudWatch Logs with retention policies  
-5. Alerting setup on the cloudwatch metrics and SNS integration for alterting
-6. Autoscaling options in case there is overload on the cluster during month ends/quarter ends in case of financial instituions
-7. SDLC currently its deployed from my local intellij by triggering cdk commands, directly deploying rom github pipeline 
-8. API throttling added with Authentication JWT Token etc tha checks the identity of the user and allows certain number of requests and block if they are increased
-9. Drawing an architecture Diagram whould have made things more better
+
+1. -----------Move from EC2 to ECS with---------------------------
+   The current solution works on EC2.  
+   I have also added ECS as it is bit more AWS managed then EC2 and great for containerization.  
+   This basic ECS example can be extended for Prod workloads.
+
+2. -----------Enhanced IAM policies------------------------------ 
+   I would implement more granular IAM roles and policies 
+   Strengthening the security of the application
+
+3. -----------Private service exposure--------------------------- 
+   Currently ALB exposes it to outer world through Public Subnets
+   Would be better if we make the entire serivce in Private Subnet 
+   Exposed thorugh VPCE and API Gateway
+
+4. -----------CloudWatch Logs with retention policies-----------
+   Setting up CloudWatch Logs with defined retention policies  
+   As financial instutions ususlaly have Regulatroy bodies asking for data/logs years older from compliance perspective
+
+5. -----------Alerting------------------------------------------
+   CloudWatch would also let me setup metric exposure of my services 
+   It easily integrates with SNS for alerting in case of failures
+   Further these metrics can help in proactively solves the issues before they are escalated
+
+6. -----------Autoscaling----------------------------------------
+   There could be spikes on Month/Quarter ends in financial Instituions when multilpe reports need to be sent
+   Or in Retial during Sales etc, such days require auto scaling options to adjust infra according to needs
+
+7. -----------SDLC integration-----------------------------------  
+   I deployed the code via my Local Intellij 
+   Having a proper functional git CI/CD pipeline would seemlessly help in deploying 
+   Making deployments reliable, trackable and rollback possible 
+
+8. -----------API throttling with authentication-----------------  
+   Users can hit the API making the service suspectible to irregualar loads 
+   API throttling coupled with Authentication JWT type or something that lets you find the identity of user
+   And restrict the API calls will help in reducing unncessary cost 
+
+9. -----------Architecture diagram-------------------------------  
+   Adding a clear architecure diagram is something I would have done.
+
 ```
 
 ### Optional Improvements to Quest
