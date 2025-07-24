@@ -16,7 +16,7 @@
 4. [`Load Balancer check`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/loadbalanced) [![LB](infra/output/ec2-load-balancer.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/loadbalanced)
 5. [`TLS check`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/tls) [![TLS](infra/output/ec2-tls.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/tls)
 
-### API Endpoints EC2 
+### API Endpoints ECS
 
 1. [`Index`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/) [![Index](infra/output/ecs-index.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/)
 2. [`Docker check`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/docker) [![Docker](infra/output/ecs-docker.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/docker)
@@ -53,4 +53,24 @@ cdk bootstrap
 cdk deploy --all
 ```
 
-### TODO 
+### What would I have If I had more time
+
+```
+1. EC2 is the working solution for this problem to improve this we can use ECS, I have implemented a very basic ECS exmple too which can be extended
+2. I would have worked more on IAM implementing more granular access controls
+3. Making service entirely private exposing, using vpce and exposure via api gateway instead of ALB creating public subnet
+4. CloudWatch Logs with retention policies  
+5. Alerting setup on the cloudwatch metrics and SNS integration for alterting
+6. Autoscaling options in case there is overload on the cluster during month ends/quarter ends in case of financial instituions
+7. SDLC currently its deployed from my local intellij by triggering cdk commands, directly deploying rom github pipeline 
+8. API throttling added with Authentication JWT Token etc tha checks the identity of the user and allows certain number of requests and block if they are increased
+9. Drawing an architecture Diagram whould have made things more better
+```
+
+### Optional Improvements to Quest
+```
+1. Task 004-006 just rely on headers so these can be easily exploited
+2. There should be a task to test out the IAM since it is one of the important aspect of Cloud Computing
+3. The code should be buggy at some places that user has to find and fix would make it more interesting
+4. There should be a architecture diagram expected to be submitted with this code
+```
