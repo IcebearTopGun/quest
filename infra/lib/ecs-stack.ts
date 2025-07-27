@@ -5,6 +5,8 @@ import * as ecs from 'aws-cdk-lib/aws-ecs';
 import * as ecsPatterns from 'aws-cdk-lib/aws-ecs-patterns';
 import * as certificatemanager from 'aws-cdk-lib/aws-certificatemanager';
 
+import * as logs from 'aws-cdk-lib/aws-logs';
+
 
 export interface EcsStackProps extends cdk.StackProps {
     vpc: ec2.IVpc;
@@ -18,9 +20,12 @@ export class EcsStack extends cdk.Stack {
         const cluster = new ecs.Cluster(this, 'QuestCluster', {vpc});
         const certificate = certificatemanager.Certificate.fromCertificateArn(
             this,
-            'selfSignedCertficate',
-            'arn:aws:acm:us-east-1:085608568682:certificate/cbc0f4e2-91ed-48f0-beb6-4f86797e6cb4'
+            'certificate',
+            'arn:aws:acm:us-east-1:335746353248:certificate/33cbc019-0e86-4693-8bb9-52bb54e7b5e0'
         );
+        const logGroup = new logs.LogGroup(this, 'QuestLogGroup', {
+            retention: logs.RetentionDays.ONE_DAY,
+        });
 
         new ecsPatterns.ApplicationLoadBalancedFargateService(this, 'QuestService', {
             cluster,
@@ -31,12 +36,17 @@ export class EcsStack extends cdk.Stack {
                 environment: {
                     SECRET_WORD: 'Naruto',
                 },
+                logDriver: ecs.LogDrivers.awsLogs({
+                    streamPrefix: 'quest-app',
+                    logGroup: logGroup,
+                }),
             },
             desiredCount: 3,
             publicLoadBalancer: true,
+
             certificate: certificate,
             listenerPort: 443,
-            redirectHTTP: true,
+            redirectHTTP: true
         });
 
     }

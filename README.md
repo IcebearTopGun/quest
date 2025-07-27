@@ -1,5 +1,10 @@
 # Quest API
 
+### NOTE
+1. AWS Started Charging Previous Deployed Services,![img_2.png](infra/output/old-aws-acc-decom.png)
+2. Had to delete Account and Create New Free Trail AWS Account [Notified over Email]
+3. Updated Links in this commit [Keeping everything else Unchanged Can be Verified from Git History]
+
 
 ### `Problem Statement`
 
@@ -10,19 +15,19 @@
 
 ### API Endpoints EC2 
 
-1. [`Index`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/) [![Index](infra/output/ec2-index.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/)
-2. [`Docker check`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/docker) [![Docker](infra/output/ec2-docker.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/docker)
-3. [`Secret Word check`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/secret_word) [![Secret](infra/output/ec2-secret-word.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/secret_word)
-4. [`Load Balancer check`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/loadbalanced) [![LB](infra/output/ec2-load-balancer.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/loadbalanced)
-5. [`TLS check`](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/tls) [![TLS](infra/output/ec2-tls.png)](https://ec2sta-albae-tkxlrycvxiwa-1658007813.us-east-1.elb.amazonaws.com/tls)
+1. [`Index`](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/) [![Index](infra/output/ec2-index.png)](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/)
+2. [`Docker check`](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/docker) [![Docker](infra/output/ec2-docker.png)](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/docker)
+3. [`Secret Word check`](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/secret_word) [![Secret](infra/output/ec2-secret-word.png)](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/secret_word)
+4. [`Load Balancer check`](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/loadbalanced) [![LB](infra/output/ec2-load-balancer.png)](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/loadbalanced)
+5. [`TLS check`](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/tls) [![TLS](infra/output/ec2-tls.png)](https://ec2sta-albae-1nnmpmvtdbyh-654976754.us-east-1.elb.amazonaws.com/tls)
 
 ### API Endpoints ECS
 
-1. [`Index`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/) [![Index](infra/output/ecs-index.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/)
-2. [`Docker check`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/docker) [![Docker](infra/output/ecs-docker.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/docker)
-3. [`Secret Word check`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/secret_word) [![Secret](infra/output/ecs-secret-word.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/secret_word)
-4. [`Load Balancer check`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/loadbalanced) [![LB](infra/output/ecs-load-balancer.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/loadbalanced)
-5. [`TLS check`](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/tls) [![TLS](infra/output/ecs-tls.png)](https://ecssta-quest-u24q9it9unkt-988408755.us-east-1.elb.amazonaws.com/tls)
+1. [`Index`](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/) [![Index](infra/output/ecs-index.png)](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/)
+2. [`Docker check`](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/docker) [![Docker](infra/output/ecs-docker.png)](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/docker)
+3. [`Secret Word check`](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/secret_word) [![Secret](infra/output/ecs-secret-word.png)](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/secret_word)
+4. [`Load Balancer check`](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/loadbalanced) [![LB](infra/output/ecs-load-balancer.png)](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/loadbalanced)
+5. [`TLS check`](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/tls) [![TLS](infra/output/ecs-tls.png)](https://ecssta-quest-s3cjocm7xtt5-1906187095.us-east-1.elb.amazonaws.com/tls)
 
 ---
 
@@ -106,3 +111,11 @@ cdk deploy --all
 3. The code should be buggy at some places that user has to find and fix would make it more interesting
 4. There should be a architecture diagram expected to be submitted with this code
 ```
+
+
+
+----------------------------------------------------------------------------------------------------------
+Had to stop Previous Services AWS Started Charging 
+1. ![img_1.png](infra/output/old-aws-acc-decom.png)
+2. ![img.png](infra/output/ec2-decom.png)
+3. ![img.png](infra/output/ecs-decom.png)

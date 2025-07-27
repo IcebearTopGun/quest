@@ -43,7 +43,7 @@ export class Ec2Stack extends cdk.Stack {
         const cert = certificatemanager.Certificate.fromCertificateArn(
             this,
             'certificate',
-            'arn:aws:acm:us-east-1:085608568682:certificate/cbc0f4e2-91ed-48f0-beb6-4f86797e6cb4'
+            'arn:aws:acm:us-east-1:335746353248:certificate/94cae054-33ca-4718-90a6-4c46851b508b'
         );
 
         const ami = ec2.MachineImage.latestAmazonLinux2023();
@@ -58,9 +58,9 @@ export class Ec2Stack extends cdk.Stack {
             'service docker start',
             'systemctl enable docker',
             'yum install -y awscli',
-            'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 085608568682.dkr.ecr.us-east-1.amazonaws.com',
-            'docker pull 085608568682.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-085608568682-us-east-1:28ddf73f9050949d28bfe17395f235cbde6b083f4d0cd6d5f74173b253c941d1',
-            'docker run -d -p 80:3000 -e SECRET_WORD=GOKU 085608568682.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-085608568682-us-east-1:28ddf73f9050949d28bfe17395f235cbde6b083f4d0cd6d5f74173b253c941d1'
+            'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 335746353248.dkr.ecr.us-east-1.amazonaws.com',
+            'docker pull 335746353248.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-335746353248-us-east-1:f359976a5e8db2f9be8c66fba897be072d4324ac9a00551bccdc13524752ec57',
+            'docker run -d -p 80:3000 -e SECRET_WORD=GOKU 335746353248.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-335746353248-us-east-1:f359976a5e8db2f9be8c66fba897be072d4324ac9a00551bccdc13524752ec57'
         );
 
         const questInstance = new ec2.Instance(this, 'QuestInstance', {
